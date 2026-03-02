@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Georgia", "Times New Roman", serif;
   background: linear-gradient(to right, #fbd3e9, #ffe6cc);
   line-height: 1.6;
 }
 
 .container {
+  width: 90%;
   max-width: 700px;
   margin: 60px auto;
   padding: 40px;
@@ -40,6 +41,7 @@ span {
 }
 
 img {
+  transition: transform 0.5s ease;
   width: 100%;
   margin: 20px 0;
   border: 1px solid #f2c6d4;
@@ -80,4 +82,8 @@ a {
 
 a:hover {
   color: #e88aa0;
+}
+
+img:hover {
+  transform: scale(1.02);
 }

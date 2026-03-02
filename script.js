@@ -9,7 +9,11 @@ const encouragements = [
   "Your pace is perfect. Softness is a strength.",
   "It is okay to be a masterpiece and a work in progress at the same time.",
   "Take a deep breath. You have survived 100% of your hardest days.",
-  "You don't have to have it all figured out today."
+  "You don't have to have it all figured out today.",
+  "Be gentle with yourself. You are doing the best you can with what you have.",
+  "Rest is not a reward; it is a requirement. You are allowed to pause.",
+  "Comparison is the thief of joy. Your journey is uniquely yours.",
+  "The world is better because you are in it, exactly as you are.",
 ];
 
 resetButton.addEventListener("click", function () {
@@ -20,7 +24,7 @@ resetButton.addEventListener("click", function () {
   responseMessage.style.color = "#a45c6a";
 
   if (feeling.length > 0) {
-  // random pick a mesasage 
+    // random pick a mesasage
     let randomIndex = Math.floor(Math.random() * encouragements.length);
     let randomMessage = encouragements[randomIndex];
 
@@ -29,7 +33,6 @@ resetButton.addEventListener("click", function () {
     responseMessage.innerHTML =
       "It’s okay if you don’t have the words yet. You’re still becoming.";
   }
-
 
   userInputField.value = "";
 });

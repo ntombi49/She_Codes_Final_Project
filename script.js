@@ -2,36 +2,32 @@ let resetButton = document.getElementById("resetButton");
 let responseMessage = document.getElementById("responseMessage");
 let userInputField = document.getElementById("userFeeling");
 
-// list of encouraging messages
 const encouragements = [
-  "Thank you for sharing. You are allowed to grow slowly.",
-  "One brave step at a time. You're doing better than you think.",
+  "You are allowed to grow slowly.",
+  "One brave step at a time.",
   "Your pace is perfect. Softness is a strength.",
-  "It is okay to be a masterpiece and a work in progress at the same time.",
-  "Take a deep breath. You have survived 100% of your hardest days.",
+  "Take a deep breath. You are doing enough.",
   "You don't have to have it all figured out today.",
-  "Be gentle with yourself. You are doing the best you can with what you have.",
-  "Rest is not a reward; it is a requirement. You are allowed to pause.",
-  "Comparison is the thief of joy. Your journey is uniquely yours.",
-  "The world is better because you are in it, exactly as you are.",
 ];
 
 resetButton.addEventListener("click", function () {
+  let name = prompt("Before we begin, what is your name?");
   let feeling = userInputField.value.trim();
 
-  responseMessage.style.marginTop = "20px";
-  responseMessage.style.fontStyle = "italic";
-  responseMessage.style.color = "#a45c6a";
-
-  if (feeling.length > 0) {
-    // random pick a mesasage
+  if (name !== null && name !== "") {
     let randomIndex = Math.floor(Math.random() * encouragements.length);
     let randomMessage = encouragements[randomIndex];
 
-    responseMessage.innerHTML = `${randomMessage} <br> <strong>Keep going.</strong>`;
+    responseMessage.style.marginTop = "20px";
+    responseMessage.style.fontStyle = "italic";
+    responseMessage.style.color = "#a45c6a";
+
+    responseMessage.innerHTML = `Thank you for sharing, ${name}. <br> ${randomMessage}`;
+
+    alert("Check the page for your personal message, " + name + "! ✨");
   } else {
-    responseMessage.innerHTML =
-      "It’s okay if you don’t have the words yet. You’re still becoming.";
+    alert("It's okay to stay anonymous. You are still seen.");
+    responseMessage.innerHTML = "You are growing in ways no one sees.";
   }
 
   userInputField.value = "";

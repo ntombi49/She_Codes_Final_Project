@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rooted – You Are Not Behind</title>
-
-    <!-- importing CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="container">
       <h1>Rooted 🌱</h1>
-
       <h2>A soft landing for overwhelmed first-year girls</h2>
 
       <p>
@@ -26,29 +23,26 @@
         alt="Soft feminine journal aesthetic"
       />
 
-      <button id="resetButton">Start My Reset</button>
+      <div class="reset-section">
+        <p>What feels heavy for you right now?</p>
+        <input type="text" id="userFeeling" placeholder="Type here..." />
+        <button id="resetButton">Start My Reset</button>
+        <div id="responseMessage"></div>
+      </div>
 
       <hr />
 
       <div class="about">
         <h2>Why Rooted?</h2>
-
         <p>
           First year can feel overwhelming. Comparison is loud.
           Pressure is heavy. But <span>small steps still count</span>.
           Growth is quiet, and you are allowed to take your time.
         </p>
-
-        <p>
-          This is your reminder that becoming takes patience,
-          softness, and courage.
-        </p>
-
         <a href="#">Learn More</a>
       </div>
     </div>
 
-    <!-- importing JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
